@@ -9,6 +9,7 @@ import {
 import { routes } from "./routes/routes";
 import SuspenseLoader from "./components/common/SuspenseLoader";
 import DataProvider from "./context/DataProvider";
+import Auth from "./auth/Auth";
 
 const ErrorComponent = lazy(() => import("./components/common/ErrorComponent"));
 
@@ -36,6 +37,7 @@ const router = createBrowserRouter(
         path={routes.invalid.path}
         element={<Navigate to={`${routes.emails.path}/inbox`} />}
       />
+      <Route path={routes.signup.path} element={<Auth />} />
     </Route>
   )
 );

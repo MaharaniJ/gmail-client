@@ -23,4 +23,8 @@ export const API_URLS = {
     endpoint: "bin",
     method: "POST",
   },
+  validateJWTToken:{
+    endpoint:"auth",
+    method:"GET"
+  }
 };
