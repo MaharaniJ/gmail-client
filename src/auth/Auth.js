@@ -81,7 +81,7 @@ const Auth = () => {
           onResolve={({ provider, data }) => {
             setProvider(provider);
             setProfile(data);
-            history("/");
+            
           }}
           onReject={(err) => {
             console.log(err);
@@ -98,7 +98,7 @@ const Auth = () => {
           onResolve={({ provider, data }) => {
             setProvider(provider);
             setProfile(data);
-            history("/");
+            
           }}
           onReject={(err) => {
             console.log(err);

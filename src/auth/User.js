@@ -1,5 +1,6 @@
 import React, { memo } from "react";
 import './auth.css'
+import { Link } from "react-router-dom";
 
 const User = memo(({ provider, profile, onLogout }) => {
   const avatar =
@@ -30,9 +31,13 @@ const User = memo(({ provider, profile, onLogout }) => {
             </div>
           ))}
         </div>
+        <div className="btn">
         <button className="btnLogout" onClick={onLogout}>
           Logout
         </button>
+        <Link to='/main'  className="gotoSite">Go to site</Link>
+        </div>
+       
       </div>
     </div>
   );
