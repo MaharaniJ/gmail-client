@@ -16,23 +16,19 @@ import {
 
 // dotenv.config();
 
-const REDIRECT_URI = "https://adorable-queijadas-af5e45.netlify.app/account/login";
+const REDIRECT_URI =
+  "https://adorable-queijadas-af5e45.netlify.app/account/login";
 
 const Auth = () => {
   const [provider, setProvider] = useState("");
   const [profile, setProfile] = useState(null);
-  const history = useNavigate()
+  const history = useNavigate();
 
   const githubAppId = "d365710fdc202602edd0";
   const githubAppSecret = "c2fa4504b2dc2754d608f54fd601eeb2b0dff762";
   const facebookAppId = "7588365514523860";
   const googleAppId =
     "658146248429-lug64bn6glq5fuot8suue6lmrsui3ggg.apps.googleusercontent.com";
-
-  // const facebookAppId = process.env.REACT_APP_FB_APP_ID;
-  // const googleAppId = process.env.REACT_APP_GG_APP_ID;
-  // const githubAppId = process.env.REACT_APP_GITHUB_APP_ID;
-  // const githubAppSecret = process.env.REACT_APP_GITHUB_APP_SECRET;
 
   const onLoginStart = useCallback(() => {
     alert("login start");
@@ -48,7 +44,6 @@ const Auth = () => {
     setProvider("");
     setProfile(null);
   }, []);
-  
 
   return (
     <div className="auth-container">
