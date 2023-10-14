@@ -16,7 +16,7 @@ import {
 
 // dotenv.config();
 
-const REDIRECT_URI = "http://localhost:3000/account/login";
+const REDIRECT_URI = "https://adorable-queijadas-af5e45.netlify.app/account/login";
 
 const Auth = () => {
   const [provider, setProvider] = useState("");
