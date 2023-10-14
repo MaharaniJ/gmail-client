@@ -37,7 +37,8 @@ const router = createBrowserRouter(
         path={routes.invalid.path}
         element={<Navigate to={`${routes.emails.path}/inbox`} />}
       />
-      <Route path={routes.signup.path} element={<Auth />} />
+
+      <Route path="/auth" element={<Auth />} />
     </Route>
   )
 );

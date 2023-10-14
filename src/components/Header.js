@@ -8,8 +8,10 @@ import {
   AccountCircleOutlined,
   Search,
 } from "@mui/icons-material";
+import Button from "@mui/material/Button";
 
 import { gmailLogo } from "../constans/constant";
+import { Link } from "react-router-dom";
 
 const StyledAppBar = styled(AppBar)`
   background: #f5f5f5;
@@ -63,6 +65,9 @@ const Header = ({ toggleDrawer }) => {
           <AppsOutlined color="action" />
           <AccountCircleOutlined color="action" />
         </OptionsWrapper>
+        <Link variant="contained" to="/auth">
+          Login
+        </Link>
       </Toolbar>
     </StyledAppBar>
   );

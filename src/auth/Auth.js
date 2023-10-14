@@ -16,13 +16,12 @@ import {
 
 // dotenv.config();
 
-const REDIRECT_URI =
-  "https://adorable-queijadas-af5e45.netlify.app";
+const REDIRECT_URI = "https://adorable-queijadas-af5e45.netlify.app";
 
 const Auth = () => {
   const [provider, setProvider] = useState("");
   const [profile, setProfile] = useState(null);
-  const history = useNavigate();
+ 
 
   const githubAppId = "d365710fdc202602edd0";
   const githubAppSecret = "c2fa4504b2dc2754d608f54fd601eeb2b0dff762";
@@ -81,7 +80,6 @@ const Auth = () => {
           onResolve={({ provider, data }) => {
             setProvider(provider);
             setProfile(data);
-            
           }}
           onReject={(err) => {
             console.log(err);
@@ -98,7 +96,6 @@ const Auth = () => {
           onResolve={({ provider, data }) => {
             setProvider(provider);
             setProfile(data);
-            
           }}
           onReject={(err) => {
             console.log(err);
@@ -111,5 +108,3 @@ const Auth = () => {
   );
 };
 export default Auth;
-
-//facebook-bac9a898cff1a5c939b0fd205f3854e0
