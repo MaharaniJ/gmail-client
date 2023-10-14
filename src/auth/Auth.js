@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from "react";
 import "./auth.css";
 import User from "./User";
+import { useNavigate } from "react-router-dom";
 import {
   LoginSocialGoogle,
   LoginSocialFacebook,
@@ -20,6 +21,7 @@ const REDIRECT_URI = "http://localhost:3000/account/login";
 const Auth = () => {
   const [provider, setProvider] = useState("");
   const [profile, setProfile] = useState(null);
+  const history = useNavigate()
 
   const githubAppId = "d365710fdc202602edd0";
   const githubAppSecret = "c2fa4504b2dc2754d608f54fd601eeb2b0dff762";
@@ -46,13 +48,14 @@ const Auth = () => {
     setProvider("");
     setProfile(null);
   }, []);
+  
 
   return (
     <div className="auth-container">
       {profile && profile && (
         <User provider={profile} profile={profile} onLogout={onLogout} />
       )}
-      <div className={`App ${provider && profile ? "hide" : ""}`}>
+      <div className={`Auth ${provider && profile ? "hide" : ""}`}>
         <h1 className="title">ReactJS Social Login </h1>
         <LoginSocialFacebook
           appId={facebookAppId || ""}
@@ -65,6 +68,7 @@ const Auth = () => {
           onResolve={({ provider, data }) => {
             setProvider(provider);
             setProfile(data);
+            // history("/");
           }}
           onReject={(err) => {
             console.log(err);
@@ -82,6 +86,7 @@ const Auth = () => {
           onResolve={({ provider, data }) => {
             setProvider(provider);
             setProfile(data);
+            history("/");
           }}
           onReject={(err) => {
             console.log(err);
@@ -98,6 +103,7 @@ const Auth = () => {
           onResolve={({ provider, data }) => {
             setProvider(provider);
             setProfile(data);
+            history("/");
           }}
           onReject={(err) => {
             console.log(err);

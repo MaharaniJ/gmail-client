@@ -1,5 +1,5 @@
 .storybook-button {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   border: 0;
   border-radius: 3em;
@@ -15,21 +15,11 @@
   background-color: #1ea7fd;
 }
 
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body,
-html {
+.auth-container {
   width: 100%;
-  height: 100%;
+  height: auto;
+  padding-top: 200px;
+  padding-bottom: 443px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +27,7 @@ html {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -51,7 +41,7 @@ code {
     #3bf0e4 108.29%,
     #b2f4b6 159.03%
   );
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -69,7 +59,7 @@ code {
 }
 
 .Auth::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   -webkit-transform: translate3d(0, 0, -1);
@@ -83,7 +73,7 @@ code {
 }
 
 .Auth::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   width: 100%;
@@ -111,46 +101,14 @@ code {
   opacity: 1;
 }
 
-.pinterest-btn {
-  display: block;
-  border: 0px;
-  border-radius: 3px;
-  box-shadow: rgb(0 0 0 / 50%) 0px 1px 2px;
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  font-size: 19px;
-  margin: 5px;
-  overflow: hidden;
-  padding: 0px 10px;
-  user-select: none;
-  height: 50px;
-  background: rgb(255, 255, 255);
-}
-
-.pinterest-btn .content {
-  align-items: center;
-  display: flex;
-  height: 100%;
-}
-
-.pinterest-btn .txt {
-  margin-left: 10px;
-}
-
-.pinterest-btn .icon {
-  display: flex;
-  justify-content: center;
-  min-width: 26px;
-}
-
 /* CARD */
 
 .card {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
   color: #eceff1;
   border-radius: 5px;
-  display: 'flex';
-  flex-direction: 'column';
+  display: "flex";
+  flex-direction: "column";
   width: 100%;
   max-width: 450px;
   align-items: center;
@@ -164,7 +122,7 @@ code {
 }
 
 .card::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   -webkit-transform: translate3d(0, 0, -1);
@@ -178,7 +136,7 @@ code {
 }
 
 .card::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   width: 100%;
@@ -217,7 +175,7 @@ code {
     #3bf0e4 108.29%,
     #b2f4b6 159.03%
   );
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
   font-size: 1.5rem;
